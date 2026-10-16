@@ -11,7 +11,8 @@
     <title>Horizonte Residencial — Um novo horizonte para viver</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400..700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400..700&display=swap" rel="stylesheet" /></noscript>
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main.js" defer></script>
@@ -40,7 +41,10 @@
 
     <main id="conteudo">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/images/fachada-principal.webp" alt="Fachada conceitual do Horizonte Residencial, com varandas amplas e paisagismo tropical" width="1800" height="1200" fetchpriority="high" />
+        <picture class="hero-picture">
+          <source media="(max-width: 680px)" srcset="assets/images/fachada-mobile.webp" width="580" height="941" />
+          <img class="hero-image" src="assets/images/fachada-principal.webp" alt="Fachada conceitual do Horizonte Residencial, com varandas amplas e paisagismo tropical" width="1672" height="941" fetchpriority="high" />
+        </picture>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
           <p class="eyebrow"><span class="eyebrow-line"></span> Um projeto residencial conceitual</p>
@@ -134,23 +138,23 @@
         </div>
         <div class="gallery-grid">
           <button class="gallery-card gallery-card-large" type="button" data-gallery-index="0" aria-label="Ampliar imagem: sala de estar e jantar integradas">
-            <img src="assets/images/sala-integrada.webp" alt="Sala de estar e jantar integradas, em tons naturais e com luz suave" width="1200" height="900" loading="lazy" />
+            <img src="assets/images/sala-integrada.webp" srcset="assets/images/sala-integrada-mobile.webp 700w, assets/images/sala-integrada-medium.webp 1000w, assets/images/sala-integrada.webp 1400w" sizes="(max-width: 680px) calc(100vw - 44px), (max-width: 980px) 53vw, 66vw" alt="Sala de estar e jantar integradas, em tons naturais e com luz suave" width="1400" height="788" loading="lazy" decoding="async" />
             <span class="gallery-caption"><span>Sala integrada</span><span aria-hidden="true">↗</span></span>
           </button>
           <button class="gallery-card" type="button" data-gallery-index="1" aria-label="Ampliar imagem: varanda com paisagismo">
-            <img src="assets/images/varanda-paisagismo.webp" alt="Varanda residencial com plantas, materiais naturais e espaço para descanso" width="900" height="700" loading="lazy" />
+            <img src="assets/images/varanda-paisagismo.webp" srcset="assets/images/varanda-paisagismo-mobile.webp 700w, assets/images/varanda-paisagismo-medium.webp 1000w, assets/images/varanda-paisagismo.webp 1400w" sizes="(max-width: 680px) calc((100vw - 53px) / 2), (max-width: 980px) 30vw, 33vw" alt="Varanda residencial com plantas, materiais naturais e espaço para descanso" width="1400" height="1050" loading="lazy" decoding="async" />
             <span class="gallery-caption"><span>Varanda com paisagismo</span><span aria-hidden="true">↗</span></span>
           </button>
           <button class="gallery-card" type="button" data-gallery-index="2" aria-label="Ampliar imagem: cozinha e jantar">
-            <img src="assets/images/cozinha-jantar.webp" alt="Cozinha e sala de jantar conectadas em uma composição contemporânea" width="900" height="700" loading="lazy" />
+            <img src="assets/images/cozinha-jantar.webp" srcset="assets/images/cozinha-jantar-mobile.webp 700w, assets/images/cozinha-jantar-medium.webp 1000w, assets/images/cozinha-jantar.webp 1400w" sizes="(max-width: 680px) calc((100vw - 53px) / 2), (max-width: 980px) 30vw, 33vw" alt="Cozinha e sala de jantar conectadas em uma composição contemporânea" width="1400" height="788" loading="lazy" decoding="async" />
             <span class="gallery-caption"><span>Cozinha e jantar</span><span aria-hidden="true">↗</span></span>
           </button>
           <button class="gallery-card" type="button" data-gallery-index="3" aria-label="Ampliar imagem: suíte principal">
-            <img src="assets/images/suite-principal.webp" alt="Suíte principal com iluminação natural e paleta de cores acolhedora" width="900" height="700" loading="lazy" />
+            <img src="assets/images/suite-principal.webp" srcset="assets/images/suite-principal-mobile.webp 700w, assets/images/suite-principal-medium.webp 1000w, assets/images/suite-principal.webp 1400w" sizes="(max-width: 680px) calc((100vw - 53px) / 2), (max-width: 980px) 30vw, 33vw" alt="Suíte principal com iluminação natural e paleta de cores acolhedora" width="1400" height="788" loading="lazy" decoding="async" />
             <span class="gallery-caption"><span>Suíte principal</span><span aria-hidden="true">↗</span></span>
           </button>
           <button class="gallery-card" type="button" data-gallery-index="4" aria-label="Ampliar imagem: deck e área de convivência">
-            <img src="assets/images/deck-convivencia.webp" alt="Deck e área de convivência ilustrativos, cercados por vegetação" width="1200" height="900" loading="lazy" />
+            <img src="assets/images/deck-convivencia.webp" srcset="assets/images/deck-convivencia-mobile.webp 700w, assets/images/deck-convivencia-medium.webp 1000w, assets/images/deck-convivencia.webp 1400w" sizes="(max-width: 680px) calc((100vw - 53px) / 2), (max-width: 980px) 30vw, 33vw" alt="Deck e área de convivência ilustrativos, cercados por vegetação" width="1400" height="788" loading="lazy" decoding="async" />
             <span class="gallery-caption"><span>Deck de convivência</span><span aria-hidden="true">↗</span></span>
           </button>
         </div>
